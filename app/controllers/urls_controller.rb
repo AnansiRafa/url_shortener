@@ -12,7 +12,7 @@ class UrlsController < ApplicationController
   # GET /urls/1
   # GET /urls/1.json
   def show
-    # redirect_to @url.long
+    redirect_to @url.long
   end
 
   # GET /urls/new
