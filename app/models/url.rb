@@ -1,5 +1,5 @@
 class Url < ApplicationRecord
-validates :long, uniqueness: true
+validates :long, :short, uniqueness: true
 before_validation :get_short, on: :create
 
 def get_short

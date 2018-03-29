@@ -3,29 +3,22 @@ class UrlsController < ApplicationController
   before_action :show_url, only: [:show]
 
 
-  # GET /urls
-  # GET /urls.json
   def index
     @urls = Url.all
   end
 
-  # GET /urls/1
-  # GET /urls/1.json
   def show
     redirect_to @url.long
   end
 
-  # GET /urls/new
+
   def new
     @url = Url.new
   end
 
-  # GET /urls/1/edit
   def edit
   end
 
-  # POST /urls
-  # POST /urls.json
   def create
     @url = Url.new(url_params)
 
@@ -40,8 +33,6 @@ class UrlsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /urls/1
-  # PATCH/PUT /urls/1.json
   def update
     respond_to do |format|
       if @url.update(url_params)
